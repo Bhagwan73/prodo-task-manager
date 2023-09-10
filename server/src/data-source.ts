@@ -3,7 +3,7 @@ import { DataSource } from "typeorm"
 import { Users } from "./entity/User"
 import { Task } from "./entity/Task"
 import dotenv from 'dotenv'
-dotenv.config({path:"./.env"})
+dotenv.config({path:".env"})
 
 export const AppDataSource = new DataSource({
     type: "postgres",
