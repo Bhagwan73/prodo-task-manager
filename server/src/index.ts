@@ -6,7 +6,7 @@ import cors from 'cors'
 import cookieParser from 'cookie-parser'
 app.use(cookieParser())
 app.use(cors({
-    origin: "*",
+    origin: process.env.ORIGIN,
     credentials: true
 }))
 
