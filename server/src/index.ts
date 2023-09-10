@@ -5,7 +5,11 @@ const app = express()
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 app.use(cookieParser())
-app.use(cors())
+app.use(cors({
+    origin: "*",
+    credentials: true
+}))
+
 app.use(express.json())
 import dotenv from 'dotenv'
 dotenv.config({ path: "./.env" })
