@@ -17,7 +17,7 @@ AppDataSource.initialize()
     .catch((err) => console.log(err))
 
 app.use(cors({
-    origin: process.env.ORIGIN,
+    origin: "*",
     credentials: true
 }))
 
