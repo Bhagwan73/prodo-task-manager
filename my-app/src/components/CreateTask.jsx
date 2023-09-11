@@ -23,7 +23,6 @@ export default function CreateTask() {
       console.log(data)
       fetch(`${baseUrl}/createTask/${userId}`, {
         method: 'POST',
-        mode:"no-cors",
         body: JSON.stringify(data),
         credentials:'include',
         headers: { 'Content-Type': 'application/json' }

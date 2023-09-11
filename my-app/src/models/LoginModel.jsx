@@ -15,7 +15,6 @@ export default function LoginModel({ props }) {
     const data={email,password}
     fetch(`${baseUrl}/login`,{
       method:'POST',
-      mode:'no-cors',
       body:JSON.stringify(data),
       headers:{'Content-Type':"application/json"},
       credentials:'include'

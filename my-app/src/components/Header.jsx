@@ -9,7 +9,6 @@ export default function Header() {
 
     const handleLogOut=function(){
           fetch(`${baseUrl}/logout`,{
-            mode:'no-cors',
             method:'PUT',
             credentials:'include'
           }).then((result)=>result.json().then((data)=>{

@@ -10,7 +10,6 @@ function App() {
   const { setUser,user,isLoggedIn } = useContext(AppContext)
   useEffect(() => {
     fetch(`${baseUrl}/profile`, {
-      mode:'no-cors',
       credentials: 'include'
     }).then((result) => result.json().then((data) => {
       if (data.status) {
