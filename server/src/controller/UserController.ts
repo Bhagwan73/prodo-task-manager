@@ -51,7 +51,8 @@ const Login = async (req: Request, res: Response) => {
       if (err) return res.status(400).send({ status: false, message: err.message })
       res.cookie('token', token, {
         httpOnly: true,
-        secure: true
+        secure: true,
+        sameSite: 'none'
       });
       return res.status(200).send({ status: true, message: `Welcome back, ${user.username} ! You've successfully logged in.` });
     })
