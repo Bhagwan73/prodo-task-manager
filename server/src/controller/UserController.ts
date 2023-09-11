@@ -52,7 +52,7 @@ const Login = async (req: Request, res: Response) => {
       res.cookie('token', token, {
         httpOnly: true,
         secure: true,
-        sameSite: 'none'
+        sameSite: 'none' 
       });
       return res.status(200).send({ status: true, message: `Welcome back, ${user.username} ! You've successfully logged in.` });
     })
