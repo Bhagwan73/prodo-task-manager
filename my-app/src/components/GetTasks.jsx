@@ -13,6 +13,7 @@ export default function GetTasks({ query }) {
         console.log("fech is called")
         fetch(`${baseUrl}/tasks/${userId}?query=${selectSlideValue}&sort=${order}&searchQuery=${searchQuery}`, {
             method: 'GET',
+            mode:"no-cors",
             credentials: 'include'
         })
         .then((result) => result.json().then((data) => {

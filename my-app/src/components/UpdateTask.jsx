@@ -16,6 +16,7 @@ export default function UpdateTask({ taskInfo, setUpdate }) {
         const userId=user._id
         fetch(`${baseUrl}/task/${taskInfo._id}/${userId}`, {
             method: 'PUT',
+            mode:"no-cors",
             body: JSON.stringify(data),
             credentials:'include',
             headers: { "Content-Type": "application/json" }

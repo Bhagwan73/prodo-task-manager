@@ -13,6 +13,7 @@ export default function SignUpModel({ props }) {
         const data={username,email,password}
         fetch(`${baseUrl}/register`,{
             method:'POST',
+            mode:'no-cors',
             body:JSON.stringify(data),
             headers:{'Content-Type':'application/json'}
         }).then((result)=>result.json().then(data=>{

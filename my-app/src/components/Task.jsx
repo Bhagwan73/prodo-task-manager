@@ -38,7 +38,8 @@ export default function Task({ taskInfo }) {
         }
         const userId=user._id
         fetch(`${baseUrl}/task/${taskInfo._id}/${userId}`, {
-            method: 'PUT',   
+            method: 'PUT', 
+            mode:'no-cors',  
             body: JSON.stringify(data),
             credentials:'include',
             headers: { "Content-Type": "application/json" }
